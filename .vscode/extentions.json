@@ -1,0 +1,13 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"stylelint.vscode-stylelint",
+		"ZixuanChen.vitest-explorer",
+		"bradlc.vscode-tailwindcss",
+		"styled-components.vscode-styled-components",
+		"visualstudioexptteam.vscodeintel",
+		"codium.codium",
+		"editorconfig.editorconfig"
+	]
+}
