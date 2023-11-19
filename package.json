@@ -1,67 +1,77 @@
 {
-  "name": "nextjs-sprout",
-  "version": "0.1.0",
-  "description": "The ByteRunners NextJS Sprout",
-  "author": {
-    "name": "ByteRunners",
-    "email": "runner@ByteRunners.com",
-    "url": "https://github.com/ByteRunners"
-  },
-  "license": "MIT",
-  "homepage": "https://ByteRunners.run",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ByteRunners/Next.js-Sprout",
-    "directory": "Next.js-Sprout",
-    "branch": "main",
-    "commit": "HEAD",
-    "host": "github.com"
-  },
-  "bugs": {},
-  "private": true,
-  "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=6.0.0",
-    "npm": "please-use-pnpm-instead",
-    "yarn": "please-use-pnpm-instead"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|json)\"",
+	"name": "nextjs-sprout",
+	"version": "0.1.0",
+	"description": "The ByteRunners NextJS Sprout",
+	"author": {
+		"name": "ByteRunners",
+		"email": "runner@ByteRunners.com",
+		"url": "https://github.com/ByteRunners"
+	},
+	"license": "MIT",
+	"homepage": "https://ByteRunners.run",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ByteRunners/Next.js-Sprout",
+		"directory": "Next.js-Sprout",
+		"branch": "main",
+		"commit": "HEAD",
+		"host": "github.com"
+	},
+	"bugs": {},
+	"private": true,
+	"engines": {
+		"node": ">=18.0.0",
+		"pnpm": ">=6.0.0",
+		"npm": "please-use-pnpm-instead",
+		"yarn": "please-use-pnpm-instead"
+	},
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|json)\"",
 		"format": "prettier . --check",
-		"format:fix": "prettier . --write"
-  },
-  "dependencies": {
-    "next": "14.0.3",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.3",
-    "postcss": "^8",
-    "prettier": "^3.1.0",
-    "prettier-plugin-tailwindcss": "^0.5.7",
-    "tailwindcss": "^3.3.5",
-    "typescript": "^5"
-  },
-  "keywords": [
-    "react",
-    "nextjs",
-    "typescript",
-    "tailwindcss",
-    "next",
-    "template",
-    "sprout",
-    "byterunners",
-    "pnpm"
-  ],
-  "packageManager": "pnpm@8.10.5"
+		"format:fix": "prettier . --write",
+		"prepare": "husky install"
+	},
+	"dependencies": {
+		"next": "14.0.3",
+		"react": "^18",
+		"react-dom": "^18"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"autoprefixer": "^10.4.16",
+		"eslint": "^8",
+		"eslint-config-next": "14.0.3",
+		"husky": "^8.0.3",
+		"postcss": "^8",
+		"prettier": "^3.1.0",
+		"prettier-plugin-tailwindcss": "^0.5.7",
+		"tailwindcss": "^3.3.5",
+		"typescript": "^5"
+	},
+	"keywords": [
+		"react",
+		"nextjs",
+		"typescript",
+		"tailwindcss",
+		"next",
+		"template",
+		"sprout",
+		"byterunners",
+		"pnpm"
+	],
+	"packageManager": "pnpm@8.10.5",
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"prettier . --write --check",
+      "eslint . --cache --fix --ext .jsx --ext .js --ext .ts --ext .tsx",
+      "pnpm test:u"
+		],
+		"*.css": "stylelint \"**/*.css\" --cache --fix"
+	}
 }
