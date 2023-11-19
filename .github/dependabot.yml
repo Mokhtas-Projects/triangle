@@ -8,4 +8,9 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "daily" # I put this as daily as a test, the value should be "weekly"
+      interval: "weekly"
+    # ignore:
+      # For all deps
+      # - dependency-name: "*"
+        # ignore all major updates
+        # update-types: ["version-update:semver-major"]
