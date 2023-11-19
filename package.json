@@ -41,6 +41,8 @@
 		"react-dom": "^18"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^18.4.2",
+		"@commitlint/config-conventional": "^18.4.2",
 		"@types/node": "^20",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
@@ -69,9 +71,14 @@
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
 			"prettier . --write --check",
-      "eslint . --cache --fix --ext .jsx --ext .js --ext .ts --ext .tsx",
-      "pnpm test:u"
+			"eslint . --cache --fix --ext .jsx --ext .js --ext .ts --ext .tsx",
+			"pnpm test:u"
 		],
 		"*.css": "stylelint \"**/*.css\" --cache --fix"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
 	}
 }
