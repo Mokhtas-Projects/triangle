@@ -29,6 +29,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
+		"commit": "cz",
 		"lint": "next lint",
 		"prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|json)\"",
 		"format": "prettier . --check",
@@ -80,5 +81,10 @@
 		"extends": [
 			"@commitlint/config-conventional"
 		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
 	}
 }
