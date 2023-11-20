@@ -1,4 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged --no-stash
+npx prettier --write --check '**/*.{js,jsx,ts,tsx}'
+npx eslint --cache --fix --ext .jsx --ext .js --ext .ts --ext .tsx '**/*.{js,jsx,ts,tsx}'
+npx stylelint "**/*.{css,scss}" --cache --fix

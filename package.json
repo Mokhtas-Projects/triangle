@@ -32,6 +32,8 @@
 		"commit": "cz",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0 --ignore-path .gitignore",
 		"lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
+		"lint:css": "stylelint \"**/*.{css,scss}\"",
+		"lint:css:fix": "stylelint \"**/*.{css,scss}\" --fix",
 		"prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|json)\"",
 		"format": "prettier . --check",
 		"format:fix": "prettier . --write",
@@ -66,8 +68,14 @@
 		"eslint-plugin-testing-library": "^6.1.2",
 		"husky": "^8.0.3",
 		"postcss": "^8",
+		"postcss-syntax": "^0.36.2",
 		"prettier": "^3.1.0",
 		"prettier-plugin-tailwindcss": "^0.5.7",
+		"stylelint": "^15.10.0",
+		"stylelint-config-idiomatic-order": "^9.0.0",
+		"stylelint-config-prettier": "^9.0.5",
+		"stylelint-config-standard": "^34.0.0",
+		"stylelint-config-styled-components": "^0.1.1",
 		"tailwindcss": "^3.3.5",
 		"typescript": "^5"
 	},
@@ -83,12 +91,6 @@
 		"pnpm"
 	],
 	"packageManager": "pnpm@8.10.5",
-	"lint-staged": {
-		"*.{js,jsx,ts,tsx}": [
-			"prettier . --write --check",
-			"eslint . --cache --fix --ext .jsx --ext .js --ext .ts --ext .tsx"
-		]
-	},
 	"commitlint": {
 		"extends": [
 			"@commitlint/config-conventional"

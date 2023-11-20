@@ -37,3 +37,7 @@ next-env.d.ts
 
 # lock files
 pnpm-lock.yaml
+
+# cache files
+.stylelintcache
+.eslintcache
