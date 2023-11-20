@@ -41,7 +41,7 @@
 		"**/coverage": true,
 		"**/node_modules": true,
 		"**.yarn/": true,
-		"**.next/": true,
+		"**.next/": true
 	},
 	"typescript.autoClosingTags": true,
 	"typescript.suggest.autoImports": true,
@@ -58,7 +58,7 @@
 		"typescript",
 		"typescriptreact"
 	],
-	"[javascript][typescript]": {
+	"[javascriptreact][typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.formatOnSave": false,
 		// Runs Prettier, then ESLint

@@ -5,12 +5,12 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: 'npm' # See documentation for possible values
+    directory: '/' # Location of package manifests
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     # ignore:
-      # For all deps
-      # - dependency-name: "*"
-        # ignore all major updates
-        # update-types: ["version-update:semver-major"]
+    # For all deps
+    # - dependency-name: "*"
+    # ignore all major updates
+    # update-types: ["version-update:semver-major"]
