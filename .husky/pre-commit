@@ -1,6 +1,11 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx prettier --write --check '**/*.{js,jsx,ts,tsx}'
-npx eslint --cache --fix --ext .jsx --ext .js --ext .ts --ext .tsx '**/*.{js,jsx,ts,tsx}'
-npx stylelint "**/*.{css,scss}" --cache --fix
+# Check for unstaged changes
+if ! git diff --exit-code --quiet
+then
+  echo "There are unstaged changes. Please commit or stash them before running this command."
+  exit 1
+fi
+
+npx lint-staged

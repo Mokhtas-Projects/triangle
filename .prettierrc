@@ -13,7 +13,7 @@
 	"requirePragma": false,
 	"insertPragma": false,
 	"proseWrap": "preserve",
-	"endOfLine": "lf",
+	"endOfLine": "auto",
 	"embeddedLanguageFormatting": "auto",
 	"plugins": ["prettier-plugin-tailwindcss"]
 }

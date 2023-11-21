@@ -2,12 +2,10 @@
 	"extends": [
 		"stylelint-config-standard",
 		"stylelint-config-idiomatic-order",
-		"stylelint-config-styled-components",
-		"stylelint-config-prettier"
+		"stylelint-config-styled-components"
 	],
 	"customSyntax": "postcss-syntax",
 	"rules": {
-		"declaration-colon-newline-after": "always-multi-line",
 		"at-rule-no-unknown": null,
 		"selector-class-pattern": [
 			"^([a-z]+)(-[a-z0-9-]+)*$",
