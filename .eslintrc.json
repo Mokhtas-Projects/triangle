@@ -88,7 +88,7 @@
 				"prettier/prettier": ["error", {}, { "usePrettierrc": true }],
 				"tailwindcss/classnames-order": "warn",
 				"tailwindcss/no-custom-classname": "warn",
-				"tailwindcss/no-contradicting-classname": "error"
+				"tailwindcss/no-contradicting-classname": "error",
 
 				/* "react/jsx-sort-props": [
 					"warn",
@@ -100,6 +100,9 @@
 					}
 				],
          */ //? If we want to sort object props
+
+				//  a common eslint issue with nextjs when using CSS in JS
+				"react/no-unknown-property": ["error", { "ignore": ["jsx"] }]
 			}
 		}
 	]
