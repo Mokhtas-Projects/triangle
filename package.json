@@ -29,7 +29,6 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"commit": "node commit-script.js",
 		"eslint": "eslint --cache --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0 --ignore-path .gitignore",
 		"lint": "next lint",
 		"lint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx",
@@ -41,13 +40,13 @@
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
+		"cz": "sh .husky/pre-commit && git cz --no-verify",
 		"prepare": "husky install"
 	},
 	"dependencies": {
 		"next": "14.0.3",
 		"react": "^18",
-		"react-dom": "^18",
-		"zod": "^3.22.4"
+		"react-dom": "^18"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^18.4.2",
@@ -62,6 +61,7 @@
 		"@typescript-eslint/eslint-plugin": "^6.11.0",
 		"@typescript-eslint/parser": "^6.11.0",
 		"autoprefixer": "^10.4.16",
+		"cz-git": "^1.7.1",
 		"eslint": "^8.54.0",
 		"eslint-config-next": "14.0.3",
 		"eslint-config-prettier": "^9.0.0",
@@ -87,7 +87,8 @@
 		"stylelint-config-styled-components": "^0.1.1",
 		"tailwindcss": "^3.3.5",
 		"ts-jest": "^29.1.1",
-		"typescript": "^5"
+		"typescript": "^5",
+		"zod": "^3.22.4"
 	},
 	"keywords": [
 		"react",
@@ -101,14 +102,9 @@
 		"pnpm"
 	],
 	"packageManager": "pnpm@8.10.5",
-	"commitlint": {
-		"extends": [
-			"@commitlint/config-conventional"
-		]
-	},
 	"config": {
 		"commitizen": {
-			"path": "cz-conventional-changelog"
+			"path": "./node_modules/cz-git"
 		}
 	},
 	"lint-staged": {
@@ -116,7 +112,7 @@
 			"pnpm eslint"
 		],
 		"**/*.{css,scss}": [
-			"pnpm lint:css:fix && pnpm prettier"
+			"stylelint --cache --fix && pnpm prettier"
 		]
 	}
 }
