@@ -56,8 +56,7 @@
 	"dependencies": {
 		"next": "14.0.3",
 		"react": "^18",
-		"react-dom": "^18",
-		"zustand": "^4.4.6"
+		"react-dom": "^18"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^18.4.2",
@@ -104,6 +103,7 @@
 		"postcss-syntax": "^0.36.2",
 		"prettier": "^3.1.0",
 		"prettier-plugin-tailwindcss": "^0.5.7",
+		"react-query": "^3.39.3",
 		"storybook": "7.5.3",
 		"stylelint": "^15.10.0",
 		"stylelint-config-idiomatic-order": "^9.0.0",
@@ -112,7 +112,8 @@
 		"tailwindcss": "^3.3.5",
 		"ts-jest": "^29.1.1",
 		"typescript": "^5",
-		"zod": "^3.22.4"
+		"zod": "^3.22.4",
+		"zustand": "^4.4.6"
 	},
 	"keywords": [
 		"react",
