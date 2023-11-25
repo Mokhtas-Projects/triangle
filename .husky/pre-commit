@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Check for unstaged changes
+if ! git diff --exit-code --quiet
+then
+  echo "There are unstaged changes. Please commit or stash them before running this command."
+  exit 1
+fi
+
+npx lint-staged
