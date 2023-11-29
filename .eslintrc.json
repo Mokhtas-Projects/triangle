@@ -1,9 +1,5 @@
 {
 	"root": true,
-	"env": {
-		"node": true,
-		"es6": true
-	},
 	"parserOptions": {
 		"ecmaVersion": 8,
 		"sourceType": "module"
@@ -29,11 +25,7 @@
 					"typescript": {}
 				}
 			},
-			"env": {
-				"browser": true,
-				"node": true,
-				"es6": true
-			},
+			"env": { "browser": true, "jest": true, "node": true, "es6": true },
 			"extends": [
 				"eslint:recommended",
 				"plugin:import/errors",
@@ -43,9 +35,9 @@
 				"plugin:react/recommended",
 				"plugin:react-hooks/recommended",
 				"plugin:jsx-a11y/recommended",
+				"plugin:jest-dom/recommended",
 				"plugin:prettier/recommended",
-				"plugin:testing-library/react",
-				"plugin:jest-dom/recommended"
+				"plugin:storybook/recommended"
 			],
 			"rules": {
 				"no-restricted-imports": [
@@ -104,6 +96,14 @@
 				//  a common eslint issue with nextjs when using CSS in JS
 				"react/no-unknown-property": ["error", { "ignore": ["jsx"] }]
 			}
+		},
+		// Only uses Testing Library lint rules in test files
+		{
+			"files": [
+				"**/__tests__/**/*.[jt]s?(x)",
+				"**/?(*.)+(spec|test).[jt]s?(x)"
+			],
+			"extends": ["plugin:testing-library/react"]
 		}
 	]
 }

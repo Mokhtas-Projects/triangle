@@ -32,6 +32,7 @@ export default function Home() {
 			<div className='m-4'>
 				<Link
 					href='/about'
+					rel='noopener noreferrer'
 					className='border-b-2 border-blue-500 text-2xl text-blue-500 transition duration-200 hover:text-blue-700'
 				>
 					About
