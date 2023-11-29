@@ -16,6 +16,12 @@ describe('Navigation', () => {
 
 		// The new page should contain an h1 with "About page"
 		cy.get('h1').contains('About Page')
+
+		// Go back to home page
+		cy.go('back')
+
+		// The url should be "/"
+		cy.url().should('not.include', '/about')
 	})
 })
 
