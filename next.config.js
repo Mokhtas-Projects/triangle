@@ -6,6 +6,7 @@
 // Github app is just an example
 
 const nextConfig = {
+	reactStrictMode: true,
 	env: {
 		GITHUB_APP_CLIENT_ID: '',
 		GITHUB_APP_CLIENT_SECRET: '',
