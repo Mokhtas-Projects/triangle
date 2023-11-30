@@ -1,0 +1,4 @@
+#Environment variables are declared here
+
+DATABASE_URL=""
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="dcvmzdidg"
