@@ -116,7 +116,7 @@
 		"prettier-plugin-tailwindcss": "^0.5.7",
 		"react-query": "^3.39.3",
 		"start-server-and-test": "^2.0.3",
-		"storybook": "7.5.3",
+		"storybook": "7.6.3",
 		"stylelint": "^15.10.0",
 		"stylelint-config-idiomatic-order": "^9.0.0",
 		"stylelint-config-standard": "^34.0.0",
