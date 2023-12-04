@@ -72,7 +72,7 @@
 		"@storybook/addon-onboarding": "1.0.8",
 		"@storybook/blocks": "7.5.3",
 		"@storybook/nextjs": "7.5.3",
-		"@storybook/react": "7.5.3",
+		"@storybook/react": "7.6.3",
 		"@storybook/testing-library": "0.2.2",
 		"@testing-library/cypress": "^10.0.1",
 		"@testing-library/jest-dom": "^6.1.4",
