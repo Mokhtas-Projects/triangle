@@ -16,7 +16,7 @@ export const LeftSidebar = () => {
 					<PagesLinks />
 				</div>
 
-				<div className='col-span-1 mt-3 flex justify-center lg:hidden'>
+				<div className='col-span-1 mt-3 flex cursor-pointer justify-center lg:hidden'>
 					<FaXmark className='text-gray-darker ' />
 				</div>
 			</div>
