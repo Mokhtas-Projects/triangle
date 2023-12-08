@@ -1,10 +1,7 @@
-import LeftSidebar from '@/components/right-sidebar/RightSidebar'
+// import Image from 'next/image'
+// import Link from 'next/link'
+// import { LeftSidebar } from '@/components/left-sidebar'
 
 export default function Home() {
-	return (
-		<div>
-			{/* Your main content goes here */}
-			<LeftSidebar />
-		</div>
-	)
+	return <main></main>
 }
