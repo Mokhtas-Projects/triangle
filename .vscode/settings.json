@@ -58,7 +58,7 @@
 		"typescript",
 		"typescriptreact"
 	],
-	"[javascriptreact][typescriptreact]": {
+	"[javascriptreact][typescriptreact][javascipt][typescript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.formatOnSave": false,
 		// Runs Prettier, then ESLint

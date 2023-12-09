@@ -1,0 +1,100 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request: {}
+
+jobs:
+  lint:
+    name: 🧪 Test, 🧹 ESLint, 👔 Stylelint, 💅 Prettier, and ʦ TypeScript
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: 📦 Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: 🗄️ Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: 🔄 Cache pnpm dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: 🧰 Install dependencies
+        run: pnpm install
+
+      - name: ⬣ Build project
+        run: pnpm build
+
+      - name: 🧪 Run tests
+        run: pnpm test
+
+      - name: 🧹 Lint code
+        run: pnpm lint:next
+
+      - name: 👔 Check styles
+        run: pnpm check-styles
+
+      - name: 💅 Check formatting
+        run: pnpm check-format
+
+      - name: ʦ Check types
+        run: pnpm check-types
+
+  # cypress-run:
+  #   name: 🌲 Cypress Tests
+  #   needs: lint
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: ⬇️ Checkout repo
+  #       uses: actions/checkout@v4
+
+  #     - name: ⎔ Setup Node.js
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 18
+
+  #     - name: 📦 Install pnpm
+  #       uses: pnpm/action-setup@v2
+  #       with:
+  #         version: 8
+
+  #     - name: 🗄️ Get pnpm store directory
+  #       shell: bash
+  #       run: |
+  #         echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+  #     - name: 🔄 Cache pnpm dependencies
+  #       uses: actions/cache@v3
+  #       with:
+  #         path: ${{ env.STORE_PATH }}
+  #         key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-pnpm-store-
+
+  #     - name: 🧰 Install dependencies
+  #       run: pnpm install
+
+  #     # - run: mv .env.example .env
+  #     - name: 🌐 Run Cypress tests
+  #       uses: cypress-io/github-action@v6
+  #       with:
+  #         build: pnpm build
+  #         start: pnpm start
