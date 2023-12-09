@@ -1,0 +1,30 @@
+{
+	"extends": [
+		"stylelint-config-standard",
+		"stylelint-config-idiomatic-order",
+		"stylelint-config-styled-components"
+	],
+	"customSyntax": "postcss-syntax",
+	"rules": {
+		"at-rule-no-unknown": null,
+		"selector-class-pattern": [
+			"^([a-z]+)(-[a-z0-9-]+)*$",
+			{
+				"message": "use lowercase latter and '-' for class name \n e.g \"form-item\""
+			}
+		],
+		"order/properties-order": null,
+		"declaration-empty-line-before": [
+			"always",
+			{
+				"except": ["first-nested"],
+				"ignore": [
+					"after-comment",
+					"after-declaration",
+					"inside-single-line-block"
+				]
+			}
+		]
+	},
+	"ignoreFiles": ["build/**", "coverage/**", "dist/**", "**/*.js"]
+}
