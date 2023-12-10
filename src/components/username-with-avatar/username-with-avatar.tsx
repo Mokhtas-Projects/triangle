@@ -6,7 +6,7 @@ import Username from '../username/username'
 export const UsernameWithAvatar = () => {
 	return (
 		<Link href={`/profile`}>
-			<div className='flex w-full flex-row items-center justify-start rounded hover:bg-gray-lighter'>
+			<div className='flex w-full flex-row items-center justify-start rounded py-1 hover:bg-gray-lighter'>
 				<UserAvatar />
 				<Username />
 			</div>
