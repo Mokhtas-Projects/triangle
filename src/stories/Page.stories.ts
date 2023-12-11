@@ -21,7 +21,7 @@ export const LoggedOut: Story = {}
 export const LoggedIn: Story = {
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		// eslint-disable-next-line testing-library/no-await-sync-queries
+
 		const loginButton = await canvas.getByRole('button', {
 			name: /Log in/i
 		})

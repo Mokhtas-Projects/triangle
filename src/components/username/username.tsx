@@ -1,8 +1,3 @@
-// your imports here
-
-// export type UserNameProps = {}
-// props: UserNameProps
-
 export const Username = () => {
 	return (
 		<div className='m-2'>
