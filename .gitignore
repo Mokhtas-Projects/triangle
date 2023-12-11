@@ -41,3 +41,6 @@ pnpm-lock.yaml
 # cache files
 .stylelintcache
 .eslintcache
+
+# env
+.env
