@@ -26,7 +26,12 @@ const config: Config = {
 					light: '#bae6fd',
 					DEFAULT: '#7dd3fc',
 					dark: '#38bdf8'
-				}
+				},
+				storyBg: '#FAFAFA',
+				storyPic: '#D9D9D9'
+			},
+			textColor: {
+				storiesHeadlineColor: '#706A6A'
 			}
 		}
 	},
