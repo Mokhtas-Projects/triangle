@@ -14,6 +14,8 @@ const config: Config = {
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
 			},
 			colors: {
+				storyBg: '#FAFAFA',
+				storyPic: '#D9D9D9',
 				black: '#334155',
 				gray: {
 					lighter: '#f1f5f9',
@@ -27,6 +29,9 @@ const config: Config = {
 					DEFAULT: '#7dd3fc',
 					dark: '#38bdf8'
 				}
+			},
+			textColor: {
+				storiesHeadlineColor: '#706A6A'
 			}
 		}
 	},
