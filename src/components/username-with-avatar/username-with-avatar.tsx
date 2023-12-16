@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
-import { UserAvatar } from '../user-avatar'
-import Username from '../username/username'
+import UserAvatar from '@/components/user-avatar/user-avatar'
+import Username from '@/components/username/username'
 
 export const UsernameWithAvatar = () => {
 	return (

@@ -1,7 +1,7 @@
 import { FaXmark } from 'react-icons/fa6'
 
-import { PagesLinks } from '@/components/pages-links'
-import { UsernameWithAvatar } from '@/components/username-with-avatar'
+import PagesLinks from '@/components/pages-links/pages-links'
+import UsernameWithAvatar from '@/components/username-with-avatar/username-with-avatar'
 
 export const LeftSidebar = () => {
 	return (
