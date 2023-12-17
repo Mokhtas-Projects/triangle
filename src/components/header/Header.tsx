@@ -6,7 +6,7 @@ import SearchBar from '../search-bar/search-bar'
 import ToggleMenu from '../toggle-menu/toggle-menu'
 export const Header = () => {
 	return (
-		<div className='bg-neutral-100 p-2 md:flex'>
+		<div className='bg-neutral-100 p-2 drop-shadow-lg md:flex'>
 			<Logo />
 			<div className='flex w-full items-center justify-between '>
 				<ToggleMenu />
