@@ -125,7 +125,7 @@
 		"start-server-and-test": "^2.0.3",
 		"storybook": "7.6.4",
 		"stylelint": "^15.10.0",
-		"stylelint-config-idiomatic-order": "^9.0.0",
+		"stylelint-config-idiomatic-order": "^10.0.0",
 		"stylelint-config-standard": "^34.0.0",
 		"stylelint-config-styled-components": "^0.1.1",
 		"tailwindcss": "^3.3.5",
