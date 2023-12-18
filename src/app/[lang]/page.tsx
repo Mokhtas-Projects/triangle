@@ -1,7 +1,7 @@
+import Footer from '@/components/footer/footer'
 import Header from '@/components/header/Header'
 import LeftSidebar from '@/components/left-sidebar/left-sidebar'
 import RightSideBar from '@/components/right-sidebar/RightSidebar'
-
 export default function Home() {
 	return (
 		<div>
@@ -10,6 +10,7 @@ export default function Home() {
 				<LeftSidebar />
 				<RightSideBar />
 			</div>
+			<Footer />
 		</div>
 	)
 }

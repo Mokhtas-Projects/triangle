@@ -5,7 +5,7 @@ import UsernameWithAvatar from '@/components/username-with-avatar/username-with-
 
 export const LeftSidebar = () => {
 	return (
-		<div className='sticky top-0 col-span-10 h-screen border-e p-4 md:col-span-8 lg:col-span-3'>
+		<div className='col-span-10 h-screen border-e p-4 md:col-span-8 lg:col-span-3'>
 			{/* md:m-4  */}
 			<div className='grid grid-cols-12'>
 				<div className='col-span-11'>
