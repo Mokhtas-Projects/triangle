@@ -13,5 +13,5 @@ const meta: Meta = {
 export default meta
 
 export const Default: StoryObj = {
-	render: (props) => <UserSearch {...props}>UserSearch</UserSearch>
+	render: () => <UserSearch />
 }

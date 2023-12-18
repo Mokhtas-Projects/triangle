@@ -13,5 +13,5 @@ const meta: Meta = {
 export default meta
 
 export const Default: StoryObj = {
-	render: (props) => <ChatSection {...props}>ChatSection</ChatSection>
+	render: () => <ChatSection />
 }
