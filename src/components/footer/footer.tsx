@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { IoMdHome } from 'react-icons/io'
 import { IoChatbubbleSharp, IoGlobeOutline, IoVideocam } from 'react-icons/io5'
 export const Footer = () => {
@@ -7,7 +8,9 @@ export const Footer = () => {
 				<IoMdHome />
 				<IoGlobeOutline />
 				<IoVideocam />
-				<IoChatbubbleSharp />
+				<Link href='/chat'>
+					<IoChatbubbleSharp />
+				</Link>
 			</ul>
 		</div>
 	)
