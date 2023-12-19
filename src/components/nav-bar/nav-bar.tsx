@@ -1,22 +1,30 @@
+import Link from 'next/link'
 import { IoMdHome } from 'react-icons/io'
 import { IoChatbubbleSharp, IoGlobeOutline, IoVideocam } from 'react-icons/io5'
 
 import { Navbutton } from '../nav-button/nav-button'
-export const NavBar = () => {
+
+interface NavBarProps {
+	color: string
+}
+
+export const NavBar = ({ color }: NavBarProps) => {
 	return (
-		<ul className='hidden gap-16 md:flex lg:mr-10 lg:gap-28'>
-			<Navbutton>
+		<ul className='flex gap-16 lg:mr-10 lg:gap-28 '>
+			<Navbutton color={color}>
 				<IoMdHome />
 			</Navbutton>
-			<Navbutton>
+			<Navbutton color={color}>
 				<IoGlobeOutline />
 			</Navbutton>
-			<Navbutton>
+			<Navbutton color={color}>
 				<IoVideocam />
 			</Navbutton>
-			<Navbutton>
-				<IoChatbubbleSharp />
-			</Navbutton>
+			<Link href='/chat'>
+				<Navbutton color={color}>
+					<IoChatbubbleSharp />
+				</Navbutton>
+			</Link>
 		</ul>
 	)
 }
