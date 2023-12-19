@@ -11,7 +11,9 @@ export const Header = () => {
 			<div className='flex w-full items-center justify-between pt-2'>
 				<ToggleMenu />
 				<SearchBar />
-				<NavBar />
+				<div className='hidden md:flex'>
+					<NavBar color={'text-teal-600'} />
+				</div>
 				<div className='flex items-center justify-center gap-2'>
 					<NotificationBell />
 					<UserAvatar />
