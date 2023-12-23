@@ -11,9 +11,11 @@ interface NavBarProps {
 export const NavBar = ({ color }: NavBarProps) => {
 	return (
 		<ul className='flex gap-16 lg:mr-10 lg:gap-28 '>
-			<Navbutton color={color}>
-				<IoMdHome />
-			</Navbutton>
+			<Link href='/'>
+				<Navbutton color={color}>
+					<IoMdHome />
+				</Navbutton>
+			</Link>
 			<Navbutton color={color}>
 				<IoGlobeOutline />
 			</Navbutton>

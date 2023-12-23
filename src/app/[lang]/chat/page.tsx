@@ -1,4 +1,4 @@
-import ChatSection from '@/components/chat-section/chat-section'
+import ChatSection from '@/app/[lang]/chat/components/chat-section/chat-section'
 import ChatSidePage from '@/components/chat-side-page/chat-side-page'
 import NavBar from '@/components/nav-bar/nav-bar'
 import UserSearch from '@/components/user-search/user-search'
