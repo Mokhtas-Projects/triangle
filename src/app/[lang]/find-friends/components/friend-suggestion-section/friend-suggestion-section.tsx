@@ -1,7 +1,9 @@
 import FindFriendsSubTitle from '@/app/[lang]/find-friends/components/find-friends-sub-title/find-friends-sub-title'
 import FriendCard from '@/app/[lang]/find-friends/components/friend-card/friend-card'
-import { pageType } from '@/app/[lang]/find-friends/page'
-export const FriendSuggestionSection = () => {
+interface FriendSuggestionProp {
+	pageType: string
+}
+export const FriendSuggestionSection = ({ pageType }: FriendSuggestionProp) => {
 	return (
 		<div
 			className={`pb-16 md:pb-0 ${pageType === 'suggestions' ? 'pt-6' : ''}`}

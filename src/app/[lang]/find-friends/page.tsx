@@ -5,8 +5,10 @@ import FriendsProfileDisplaySection from '@/app/[lang]/find-friends/components/f
 import FindFriendsNavBar from '@/components/find-friends-nav-bar/find-friends-nav-bar'
 import Header from '@/components/header/Header'
 import NavBar from '@/components/nav-bar/nav-bar'
-export const pageType: string = 'Home'
-export default function FindFriends() {
+interface FindFriendsProp {
+	pageType: string
+}
+export default function FindFriends({ pageType }: FindFriendsProp) {
 	return (
 		<div>
 			<Header />
@@ -15,18 +17,18 @@ export default function FindFriends() {
 				<div className='mx-5 md:ml-80 md:w-3/4'>
 					{pageType === 'Home' ? (
 						<div>
-							<FindFriendRequestsSection />
+							<FindFriendRequestsSection pageType={pageType} />
 							<hr />
-							<FriendSuggestionSection />
+							<FriendSuggestionSection pageType={pageType} />
 						</div>
 					) : pageType === 'request' ? (
 						<div className='flex flex-col '>
-							<FindFriendRequestsSection />
+							<FindFriendRequestsSection pageType={pageType} />
 							<FriendsProfileDisplaySection />
 						</div>
 					) : pageType === 'suggestions' ? (
 						<div className='flex flex-col'>
-							<FriendSuggestionSection />
+							<FriendSuggestionSection pageType={pageType} />
 							<FriendsProfileDisplaySection />
 						</div>
 					) : pageType === 'list' ? (

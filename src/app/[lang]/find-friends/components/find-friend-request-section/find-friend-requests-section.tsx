@@ -1,7 +1,9 @@
 import FindFriendsSubTitle from '@/app/[lang]/find-friends/components/find-friends-sub-title/find-friends-sub-title'
 import FriendCard from '@/app/[lang]/find-friends/components/friend-card/friend-card'
-import { pageType } from '@/app/[lang]/find-friends/page'
-export const FindFriendRequestsSection = () => {
+interface FriendRequestProp {
+	pageType: string
+}
+export const FindFriendRequestsSection = ({ pageType }: FriendRequestProp) => {
 	return (
 		<div className={pageType === 'request' ? ' pb-16 pt-6 md:pb-0' : 'pb-6'}>
 			{pageType === 'request' ? null : (
