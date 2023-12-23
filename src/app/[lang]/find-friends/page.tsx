@@ -5,10 +5,8 @@ import FriendsProfileDisplaySection from '@/app/[lang]/find-friends/components/f
 import FindFriendsNavBar from '@/components/find-friends-nav-bar/find-friends-nav-bar'
 import Header from '@/components/header/Header'
 import NavBar from '@/components/nav-bar/nav-bar'
-interface FindFriendsProp {
-	pageType: string
-}
-export default function FindFriends({ pageType }: FindFriendsProp) {
+export default function FindFriends() {
+	const pageType: string = 'Home'
 	return (
 		<div>
 			<Header />
