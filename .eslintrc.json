@@ -10,7 +10,6 @@
 		"next",
 		"next/core-web-vitals",
 		"eslint:recommended",
-		"plugin:tailwindcss/recommended",
 		"plugin:prettier/recommended"
 	],
 	"overrides": [
@@ -78,9 +77,6 @@
 				"@typescript-eslint/no-empty-function": ["off"],
 				"@typescript-eslint/no-explicit-any": ["off"],
 				"prettier/prettier": ["error", {}, { "usePrettierrc": true }],
-				"tailwindcss/classnames-order": "warn",
-				"tailwindcss/no-custom-classname": "warn",
-				"tailwindcss/no-contradicting-classname": "error",
 
 				/* "react/jsx-sort-props": [
 					"warn",

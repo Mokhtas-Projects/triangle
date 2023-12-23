@@ -1,4 +1,4 @@
-import ChatBoard from '@/components/chat-board/chat-board'
+import ChatBoard from '@/app/[lang]/chat/components/chat-board/chat-board'
 import ChatHeader from '@/components/chat-header/chat-header'
 export const ChatSection = () => {
 	return (
