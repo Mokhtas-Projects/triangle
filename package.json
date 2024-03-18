@@ -74,7 +74,7 @@
 		"@storybook/addon-essentials": "7.6.12",
 		"@storybook/addon-interactions": "7.6.10",
 		"@storybook/addon-links": "7.6.12",
-		"@storybook/addon-onboarding": "1.0.9",
+		"@storybook/addon-onboarding": "8.0.0",
 		"@storybook/blocks": "7.6.6",
 		"@storybook/nextjs": "7.6.10",
 		"@storybook/react": "7.6.6",
